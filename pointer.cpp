@@ -77,7 +77,7 @@ void example06(){
     cin >> row >> col;
 
     ptr = new int*[row];
-    for(int i=0; i<col; i++)
+    for(int i=0; i<row; i++)
         ptr[i] = new int[col];
 
     for(int i=0; i<row; i++)
@@ -88,13 +88,13 @@ void example06(){
         for(int j=0; j<col; j++)
             cout << *(*(ptr+i)+j) << '\n';
 
-    for(int i=0; i<col; i++)
+    for(int i=0; i<row; i++)
         delete[] ptr[i];
 
     delete[] ptr;
 }
 
 int main(int argc, char * argv[]){
-    example05();
+    example06();
 }
 
