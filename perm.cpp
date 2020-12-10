@@ -12,14 +12,14 @@ void perm(int *arr, int i, int len, void (*func)(int *, int)){
     // i: starting index
     // len: length of array
     // func: function to deal with the result
-    if(i == len-1){
+    if(i == len-1){                 //if starting index is last item
         func(arr, len);
         return;
     }
     for(int j=i; j<len; j++){
-        std::swap(arr[i], arr[j]);
-        perm(arr, i+1, len, func);
-        std::swap(arr[i], arr[j]);
+        std::swap(arr[i], arr[j]);  //swap item
+        perm(arr, i+1, len, func);  //send left array recussively
+        std::swap(arr[i], arr[j]);  //restore item
     }
 }
 
