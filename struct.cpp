@@ -59,4 +59,6 @@ int main(int argc, char * argv[]){
         cout << "staff id: " << (arrPtr+i)->id << ",";
         cout << " name: " << (arrPtr+i)->name << '\n';
     }
+    delete[] arrPtr;
+    return 0;
 }
